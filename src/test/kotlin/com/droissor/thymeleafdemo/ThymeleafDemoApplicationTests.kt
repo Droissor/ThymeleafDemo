@@ -1,4 +1,4 @@
-package com.droissor.ThymeleafDemo
+package com.droissor.thymeleafdemo
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
