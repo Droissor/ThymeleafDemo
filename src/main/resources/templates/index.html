@@ -147,10 +147,34 @@
     </div>
 
     <div class="row course-list list">
+        <div class='row course-list list'>
+            <div th:each="product,it : ${products}">
+                <div th:if="${(it.count gt 0 and it.count lt 4)}">
+                    <div th:replace="fragments/productdiv :: productdiv">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row course-list list">
+        <div class='row course-list list'>
+            <div th:each="product,it : ${products}">
+                <div th:if="${(it.count gt 3 and it.count lt 7)}">
+                    <div th:replace="fragments/productdiv :: productdiv">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row course-list list" th:remove="all">
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a href="product.html">
+                    <a href="product.html" th:href="@{/product/1}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -188,7 +212,7 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product.html" th:href="@{/product/4}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -226,7 +250,7 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product.html" th:href="@{/product/5}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -263,11 +287,11 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row course-list list" th:remove="all">
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product.html" th:href="@{/product/6}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -306,7 +330,7 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product.html" th:href="@{/product/2}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -340,7 +364,7 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product.html" th:href="@{/product/3}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"

@@ -51,8 +51,6 @@ class ProductServiceImpl : ProductService{
             category = "Thymeleaf"
         )
 
-
-        val productMap = mutableMapOf<Int, Product>()
         val springIntro = Product(
             id = 1,
             courseName = "Introduction to Spring",
